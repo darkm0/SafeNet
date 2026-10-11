@@ -1,0 +1,10 @@
+SafeNet — Online Safety for Everyone
+V18 Full-stack project
+Creator: Supraj Sunil Panchal
+Roll No.: 72
+
+Base preserved: 3D marble / skin-colour luxury design, SafeNet core/orbits, Learning Hub, Knowledge Center, direct-link videos, Scenario Lab (83 scenarios), feedback and authenticated admin flow.
+
+V18 additions: all-audience safety paths, interactive safety simulator, scam library, phishing lab, password checker, digital footprint lab, safe gaming zone, parent/educator center, learning resources with completion, 18-question quiz, user registration/login/dashboard, password hashing, progress sync, certificates, help/reporting, expanded admin CRUD, audit log and credential management.
+
+Version 18: restored/enhanced skin-colour marble 3D reflections across public, account, dashboard, scenario and admin screens; fixed hard admin login gating.

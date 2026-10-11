@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeNet | Scenario Challenge</title>
+<link rel="stylesheet" href="scenario.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">🛡️ Safe<span>Net</span></a>
+  <a class="back" href="index.html">← Main Website</a>
+</header>
+
+<main>
+<section class="intro">
+  <div class="eyebrow">SCENARIO CHALLENGE • 83 QUESTIONS</div>
+  <h1>What would <span>you</span> do?</h1>
+  <p>Explore realistic online-safety situations and choose the safest response. Every answer gives a short explanation so you can learn from each situation.</p>
+  <div class="stats">
+    <div><b id="totalCount">83</b><small>Total scenarios</small></div>
+    <div><b id="doneCount">0</b><small>Completed</small></div>
+    <div><b id="scoreCount">0</b><small>Safe choices</small></div>
+  </div>
+</section>
+
+<section class="controls">
+  <div><label for="category">Filter by topic</label><select id="category"><option value="">All topics</option></select></div>
+  <div><label for="search">Search scenarios</label><input id="search" type="search" placeholder="e.g. password, gaming, privacy"></div>
+  <button id="reset" class="reset">Reset Progress</button>
+</section>
+
+<section class="challenge">
+  <div class="challenge-top">
+    <div><span id="scenarioNumber">Scenario 1</span><h2 id="scenarioCategory">Loading…</h2></div>
+    <div class="progress-wrap"><span id="progressText">0 / 83</span><div class="progress"><i id="progressBar"></i></div></div>
+  </div>
+  <div class="question-card">
+    <div class="badge">SCENARIO</div>
+    <h3 id="question">Loading scenario questions…</h3>
+    <div id="options" class="options"></div>
+    <div id="explanation" class="explanation"></div>
+    <div class="actions">
+      <button id="prev" class="secondary">← Previous</button>
+      <button id="next" class="primary">Next →</button>
+    </div>
+  </div>
+</section>
+
+<section class="all-section">
+  <div class="section-heading">
+    <span>SCENARIO LIBRARY</span>
+    <h2>All <em>83</em> situations</h2>
+    <p>Jump directly to any scenario. Completed questions are marked with a check.</p>
+  </div>
+  <div id="scenarioList" class="scenario-list"></div>
+</section>
+</main>
+<footer>🛡️ SafeNet · Online Safety for Children & Adolescents</footer>
+<script src="scenario.js"></script>
+</body>
+</html>

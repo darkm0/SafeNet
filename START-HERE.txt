@@ -1,0 +1,37 @@
+SafeNet – Online Safety Awareness Platform
+V22 Full-Stack Release
+
+WHAT IS INCLUDED
+- Complete Node.js + Express backend
+- Complete SafeNet frontend
+- Admin panel
+- Student/user registration and login
+- Scenario Lab (83+ scenarios)
+- Learning tools, quizzes, reports, progress and certificates
+- JSON data storage
+- Latest static “Protect your identity” and “Verify before trusting” visual cards
+- Admin controls with secure password hashing
+
+RUN IN VS CODE (Windows PowerShell)
+1. Extract the ZIP.
+2. Open the extracted SafeNet-Online-Safety-Enhanced-v19 folder in VS Code.
+3. Open Terminal and run:
+   cd backend
+   npm.cmd install
+   npm.cmd start
+4. Open:
+   http://localhost:5000/
+
+ADMIN
+Admin page:
+http://localhost:5000/admin.html?login=1
+
+Username: admin
+Password: SafeNet@2026
+
+IMPORTANT
+Use the Node/Express URL above for the full project. Do not rely on opening frontend/index.html directly when testing login, registration, progress or admin features.
+User passwords are stored as secure hashes and are not shown to administrators.
+
+ONLINE DEPLOYMENT
+See DEPLOY-ONLINE-STEP-BY-STEP.txt. For persistent online registrations, configure DATABASE_URL to a hosted PostgreSQL database. GitHub Pages alone cannot run this backend.

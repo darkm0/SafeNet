@@ -1,0 +1,32 @@
+SAFENET V25 — DEPLOY ONLINE WITH STUDENT REGISTRATION + ADMIN
+
+IMPORTANT
+This version can use a hosted PostgreSQL database so student records and admin-managed content survive web-service restarts. Do not publish only index.html or use GitHub Pages alone.
+
+RECOMMENDED LOW-COST/FREE-TO-START SETUP
+1. Create a GitHub account if you do not have one.
+2. Create a Supabase project at https://supabase.com/ . Save the database password securely.
+3. In Supabase, open Connect and copy a PostgreSQL connection string suitable for a persistent Node.js server. Prefer the shared/session pooler if the direct connection is not reachable from your host. Replace the placeholder password with your database password. Keep this URL private.
+4. Extract this ZIP. Upload the contents of the SafeNet-Online-Safety-Enhanced-v19 folder to a new GitHub repository (upload the files/folders, not the ZIP file itself).
+5. In Render (https://render.com/), choose New > Web Service and connect the GitHub repository.
+6. Set Root Directory to the project folder if you uploaded the project folder inside the repo; otherwise leave it blank.
+7. Build Command: cd backend && npm install
+8. Start Command: cd backend && npm start
+9. Add environment variables in Render: NODE_ENV=production; DATABASE_URL=<your Supabase PostgreSQL connection string>; SAFENET_ADMIN_USER=<your chosen admin username>; SAFENET_ADMIN_PASSWORD=<a new unique password at least 8 characters long>. Do not share these secrets or commit them to GitHub.
+10. Deploy. Wait until the service status is Live.
+11. Open https://YOUR-SERVICE.onrender.com/api/health and confirm it reports status online.
+12. Open https://YOUR-SERVICE.onrender.com/ and test student registration, logout/login, then open https://YOUR-SERVICE.onrender.com/admin.html?login=1 and test the admin login.
+
+IMPORTANT DATA NOTES
+- On first launch, the JSON data bundled in backend/data seeds the database if the database table is empty. After that, PostgreSQL is the persistent source of truth.
+- Keep DATABASE_URL secret. Do not put it in frontend code or public GitHub files.
+- Use a strong unique admin password. If an admin record has already been created in the database, changing SAFENET_ADMIN_PASSWORD later will not automatically overwrite it; use the Admin Security panel to change credentials.
+- Render free web services may sleep while idle and can take around a minute to wake. The hosted PostgreSQL plan's current limits/pausing policy may change; check Supabase plan details before using it for real students.
+- This is an academic awareness project, not a certified production security system. Do not collect sensitive information you do not need.
+
+LOCAL TEST
+From the project folder in VS Code terminal:
+  cd backend
+  npm.cmd install
+  npm.cmd start
+Then open http://localhost:5000/ . Without DATABASE_URL, the project uses local JSON files for local development.

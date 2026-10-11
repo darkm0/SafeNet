@@ -1,0 +1,4 @@
+Scenario Lab is embedded in the main page and can also be opened from the standalone scenario page.
+
+V13 note:
+The Scenario Lab now requests /api/scenarios when the backend is running, so admin edits to scenario questions can appear in the public Scenario Lab after a page reload. When the standalone HTML is opened without the server, its built-in 83-scenario fallback remains available.
